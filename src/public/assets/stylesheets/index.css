@@ -1,0 +1,235 @@
+/* -------------------  MOBILE  --------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  min-height: 100vh;
+}
+
+header {
+  /* header styles */
+  flex: 1;
+  padding: 0 20px 0 20px;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  /* footer styles */
+}
+
+button {
+  all: unset;
+  padding: 4px 11px;
+  background: #0071e3;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav-header h1 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/mars.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.rover-selection-list {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.rover-selection-list li {
+  display: flex;
+  width: calc((100% - 32px) / 3);
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+  font-size: 18px;
+}
+
+.rover-selection-list li.active {
+  height: 80px;
+}
+
+.rover-selection-list .curiosity {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/curiosity.jpg");
+}
+
+.rover-selection-list .opportunity {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/opportunity.jpg");
+}
+
+.rover-selection-list .spirit {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/spirit.jpg");
+}
+
+.rover-info {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+.rover-info-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 16px;
+}
+
+.filter-form {
+  width: calc(100% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 25px;
+  padding: 16px;
+  background: #f5f5f7;
+}
+
+.rover-info-header-detail {
+  width: calc(100% - 8px);
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 2.5fr 1.5fr;
+  border-radius: 25px;
+  padding: 16px;
+  background: #f5f5f7;
+}
+
+.rover-info-header-detail p {
+  display: flex;
+  height: auto;
+  padding: 4px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+}
+
+.photo-slide-show {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.photo-slide-show-border {
+  width: 100%;
+  height: 400px;
+}
+
+.photo-slide-show-border img {
+  width: 100%;
+  height: 100%;
+}
+
+.photo-gallery {
+  width: 100%;
+  height: 102px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 8px;
+  align-items: center;
+}
+
+.photo-border {
+  height: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(100% / 5);
+  padding: 4px;
+  border-radius: 10px;
+  background: #f5f5f7;
+  cursor: pointer;
+}
+
+.photo-border.active {
+  border: 1px solid #0071e3;
+}
+
+.photo-border img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.pagination {
+  margin-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pagination .btn-page {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-page button.active {
+  background: unset;
+  border: 1px solid #0071e3;
+  color: #0071e3;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading p {
+  font-size: 24px;
+}
+
+/* -------------------  TABLET  --------------------- */
+@media (min-width: 768px) {
+  /* use mobile */
+}
+
+/* -------------------  DESKTOP  -------------------- */
+
+@media (min-width: 1224px) {
+  /* use mobile */
+}
+
+/* -------------------  LARGE SCREENS  -------------- */
+
+@media (min-width: 1824px) {
+  /* use mobile */
+}
