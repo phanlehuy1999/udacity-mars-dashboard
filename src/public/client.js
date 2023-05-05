@@ -2,9 +2,10 @@ let store = {
   appRouter: {
     currentRoute: "/",
     routeParams: {},
-    routes: {
-      ROVER_INFO: { path: "/rover" },
-    },
+    routes: Immutable.Map({
+      roverInfo: Immutable.Map({ path: "/rover" }),
+      // Future other routes
+    }),
   },
   apod: "",
   rovers: Immutable.List(["Curiosity", "Opportunity", "Spirit"]),
@@ -91,7 +92,7 @@ const RoverSelectionBar = (rovers, appRouter) => {
   const { routeParams } = appRouter;
   const { roverName } = routeParams;
   const selectionList = generateListElement(
-    Array.from(rovers),
+    rovers,
     createListItemElement,
     roverName
   );
@@ -113,7 +114,7 @@ const MainContainer = (
   photoSlideShow
 ) => {
   const { currentRoute, routes } = appRouter;
-  if (currentRoute.startsWith(routes.ROVER_INFO.path)) {
+  if (currentRoute.startsWith(routes.get("roverInfo").get("path"))) {
     return `
         <section>
           ${RoverInfo(appRouter, photoManifest, roverPhotos, photoSlideShow)}
