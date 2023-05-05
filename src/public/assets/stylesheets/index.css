@@ -17,10 +17,6 @@ main {
   padding: 20px;
 }
 
-footer {
-  /* footer styles */
-}
-
 button {
   all: unset;
   padding: 4px 11px;
@@ -107,7 +103,7 @@ button {
 .rover-info-header {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto;
   gap: 16px;
 }
 
@@ -220,6 +216,10 @@ button {
 /* -------------------  TABLET  --------------------- */
 @media (min-width: 768px) {
   /* use mobile */
+  .rover-info-header {
+    grid-template-rows: unset;
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 /* -------------------  DESKTOP  -------------------- */
